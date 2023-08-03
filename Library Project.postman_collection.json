@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "e946d7bd-9b23-491a-8615-d872d387e669",
+		"name": "Library Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19449186"
+	},
+	"item": [
+		{
+			"name": "USER MANAGEMENT",
+			"item": [
+				{
+					"name": "register new member",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"args\": {\r\n        \"auth\": {\r\n            \"name\": \"avinash\",\r\n            \"email\": \"avinashts1998@gmail.com\"\r\n        },\r\n        \"params\": {\r\n            \"first_name\": \"Aviansh\",\r\n            \"last_name\": \"TS\",\r\n            \"email\": \"avinashts1998@gmail.com\",\r\n            \"password\": \"Avinash@1234\",\r\n            \"token\": \"sd567wrasef\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"args\": {\r\n        \"auth\": {\r\n            \"name\": \"avinash\",\r\n            \"email\": \"avinashts1998@gmail.com\"\r\n        },\r\n        \"params\": {\r\n            \"username\": \"Avianshts1998gmail.com\",\r\n            \"password\": \"TS\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BOOKS MANAGEMENT",
+			"item": [
+				{
+					"name": "Delete Book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"args\": {\r\n        \"auth\": {\r\n            \"name\": \"avinash\",\r\n            \"age\": 25\r\n        },\r\n        \"params\": {\r\n            \"_id\": \"647ee91c2677cfd9cd6f37dd\",\r\n            \"action\" : \"delete\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/delete-book",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"delete-book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Author Filter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"args\": {\r\n        \"auth\": {\r\n            \"name\": \"avinash\",\r\n            \"age\": 25\r\n        },\r\n        \"params\" : {\r\n            \"auther_key\" : \"telugu\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/books-language-filte",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"books-language-filte"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Book Status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"args\": {\r\n        \"auth\": {\r\n            \"name\": \"avinash\",\r\n            \"age\": 25\r\n        },\r\n        \"params\": {\r\n            \"_id\": \"648056ab87c862d6e242305b\",\r\n            \"book_status\" : 1\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/update-book-status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"update-book-status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Book",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"args\": {\r\n        \"auth\": {\r\n            \"name\": \"avinash\",\r\n            \"age\": 25\r\n        },\r\n        \"params\": {\r\n            \"_id\": \"647ee91c2677cfd9cd6f37dd\",\r\n            \"book_no\": 105,\r\n            \"book_name\": \"Aadujeevitham\",\r\n            \"auther\": \"Benyamin\",\r\n            \"publications\": \"Current Books\",\r\n            \"category\": \"Novel\",\r\n            \"shelf_number\": 4,\r\n            \"row_no\": 3,\r\n            \"published_year\": 2006,\r\n            \"language\": \"Malayalam\",\r\n            \"description\": \"The novel is a retelling of the Indian epic Mahabharata from the perspective of Bhima, the second Pandava. The story deviates from the traditional Mahabharata story as it avoids the divine elements of the ancient epic and re-represent the characters and events realistically.\",\r\n            \"image\": \"image.jpg\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/update-book",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"update-book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Language Book",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"args\": {\r\n        \"auth\": {\r\n            \"name\": \"avinash\",\r\n            \"age\": 25\r\n        },\r\n        \"params\" : {\r\n            \"language_key\" : \"telugu\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/books-language-filter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"books-language-filter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Books",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"args\": {\r\n        \"auth\": {\r\n            \"name\": \"avinash\",\r\n            \"age\": 25\r\n        },\r\n        \"params\": {\r\n            \"book_no\": 105,\r\n            \"book_name\": \"Aadujeevithamkkkkkkkk\",\r\n            \"auther\": \"Benyamin\",\r\n            \"publications\": \"Current Books\",\r\n            \"category\": \"Novel\",\r\n            \"shelf_number\": 4,\r\n            \"row_no\": 3,\r\n            \"published_year\": 2006,\r\n            \"language\": \"Marati\",\r\n            \"book_inserted_date\" : \"06-06-2023\",\r\n         \r\n            \"description\": \"The novel is a retelling of the Indian epic Mahabharata from the perspective of Bhima, the second Pandava. The story deviates from the traditional Mahabharata story as it avoids the divine elements of the ancient epic and re-represent the characters and events realistically.\",\r\n            \"image\": \"image.jpg\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/insert-book",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"insert-book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Books Count",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"args\": {\r\n        \"auth\": {\r\n            \"name\": \"avinash\",\r\n            \"age\": 25\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/get-all-book-count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"get-all-book-count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Books Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\" : \"Avinash\",\r\n    \"last_name\" : \"TS\",\r\n    \"email\" : \"Avinashts1998@gmail.com\",\r\n    \"password\" : \"1234567\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MEMBERS MANAGEMENT",
+			"item": [
+				{
+					"name": "Create Member",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"args\": {\r\n        \"auth\": {\r\n            \"name\": \"avinash\",\r\n            \"age\": 25\r\n        },\r\n        \"params\": {\r\n            \"membership_no\": 405,\r\n            \"member_name\": \"Avinash TS\",\r\n            \"address\": \"Tharayil House Kambatty Post, Venmani\",\r\n            \"email\": \"avinashts1998@gmial.com\",\r\n            \"mobile_no\": \"7559082108\",\r\n            \"member_added_date\": \"11-04-2023\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/member/create-member",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"member",
+								"create-member"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
